@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* Add to your global CSS or index.css */
+
+/* Custom scrollbar */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  border-radius: 20px;
+}
+
+/* Gradient animation */
+@keyframes gradient {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+.animate-gradient {
+  animation: gradient 3s ease infinite;
+}
+
+/* Smooth loading shimmer effect */
+.shimmer {
+  background: linear-gradient(90deg, #1e1b4b 25%, #312e81 50%, #1e1b4b 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  height: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  border-radius: 20px;
+}
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better mobile tap highlight */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px rgba(30, 27, 75, 0.9) inset !important;
+  -webkit-text-fill-color: white !important;
+  border-color: rgba(168, 85, 247, 0.3) !important;
+}
